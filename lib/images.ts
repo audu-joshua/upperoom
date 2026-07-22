@@ -12,16 +12,32 @@ export const images = {
 
   mandateBg: "/upperoom7.webp",
 
+  about: {
+    hero: "/upperoom17.webp",
+    history: "/Mummy_Daddy.webp",
+    wordAndPrayer: "/upperoom7.webp",
+  },
+
+  loginBg: "/upperoom17.webp",
+
+  leaders: {
+    papa: "/papa.webp",
+    mama: "/mama.webp",
+  },
+
   sermons: {
     featured: "/upperoom16.webp",
     second: "/upperoom13.webp",
+    third: "/bishop_preaching.webp",
   },
 
   ministries: {
+    hero: "/upperoom5.webp",
     theWord: "/upperoom13.webp",
-    worship: "/upperoom8.webp",
+    worship: "/worship.jpg",
     prayer: "/prayer.webp",
     youth: "/upperoom19.webp",
+    outreach: "/upperoom10.webp",
   },
 
   gallery: [

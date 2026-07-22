@@ -4,6 +4,7 @@ import { HomeEventsSection } from "@/components/events/HomeEventsSection";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { HomeGallery } from "@/components/home/HomeGallery";
+import { SermonCardImage } from "@/components/sermons/SermonCardImage";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { images } from "@/lib/images";
 import { site } from "@/lib/site";
@@ -12,22 +13,22 @@ const mandateCards = [
   {
     icon: "visibility",
     title: "Vision",
-    text: "To raise a global army of believers walking in apostolic authority and spiritual excellence.",
+    text: "We will give ourselves continually to prayer and to the ministry of the word. For the salvation and establishment of souls in the kingdom.",
   },
   {
     icon: "flag",
     title: "Mission",
-    text: "Establishing kingdom principles through rigorous training in the Word and intense prayer.",
+    text: "Reaching the world through compassionate prayers, preaching and teaching of the word of God with signs and wonders following with the sole purpose of changing lives and kingdom building.",
   },
   {
     icon: "psychology",
     title: "Strategy",
-    text: "Systematic teaching, vibrant community, and strategic global outreach initiatives.",
+    text: "To offer quality and excellent service to God as our mark of honor to Him, and also to offer quality and excellent service to mankind in order to change lives into his likeness.",
   },
   {
     icon: "auto_awesome",
     title: "Slogan",
-    text: "Upper Room Cathedral: Where the Spirit meets the Word.",
+    text: "We are blessed to be a blessing.",
     italic: true,
   },
 ];
@@ -35,6 +36,8 @@ const mandateCards = [
 const sermons = [
   {
     image: images.sermons.featured,
+    /** Portrait asset — keep focus high so the head is not cropped */
+    imageFocus: "50% 12%",
     series: "Series: The Fire Within",
     title: "Walking in Apostolic Authority",
     delay: 0,
@@ -46,7 +49,7 @@ const sermons = [
     delay: 100,
   },
   {
-    image: images.sermons.featured,
+    image: images.sermons.third,
     series: "Mid-Week Service",
     title: "Cultivating a Heart for Prayer",
     delay: 200,
@@ -144,8 +147,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {sermons.map((sermon) => (
               <RevealOnScroll key={sermon.title} className="active group overflow-hidden rounded-xl glass" delay={sermon.delay}>
-                <div className="relative h-64">
-                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url('${sermon.image}')` }} />
+                <div className="relative">
+                  <SermonCardImage
+                    src={sermon.image}
+                    alt={sermon.title}
+                    focus={sermon.imageFocus}
+                  />
                   <div className="absolute inset-0 flex items-center justify-center bg-primary-container/20 transition-all group-hover:bg-primary-container/0">
                     <span className="material-symbols-outlined text-6xl text-on-surface opacity-0 transition-opacity group-hover:opacity-100">play_circle</span>
                   </div>

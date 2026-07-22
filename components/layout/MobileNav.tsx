@@ -83,7 +83,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         </div>
 
         <div
-          className="w-full max-w-xs pt-8 mobile-nav-link"
+          className="flex w-full max-w-xs flex-col gap-4 pt-8 mobile-nav-link"
           style={{ animationDelay: `${120 + navLinks.length * 70}ms` }}
         >
           <button
@@ -96,6 +96,13 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           >
             Give
           </button>
+          <Link
+            href="/login"
+            onClick={onClose}
+            className="block w-full cursor-pointer rounded-lg bg-secondary px-8 py-5 text-center text-label-md uppercase tracking-[0.2em] text-on-secondary shadow-lg shadow-secondary/20 transition-all duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-95"
+          >
+            Login
+          </Link>
         </div>
       </nav>
 

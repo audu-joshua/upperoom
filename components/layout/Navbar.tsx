@@ -40,6 +40,12 @@ export function Navbar() {
             >
               Give
             </button>
+            <Link
+              href="/login"
+              className="cursor-pointer bg-secondary px-8 py-2.5 text-label-md uppercase tracking-widest text-on-secondary shadow-sm transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-secondary/35 hover:brightness-110 active:scale-95"
+            >
+              Login
+            </Link>
           </div>
 
           <button
